@@ -16,106 +16,102 @@ public class Model {
         String filepath = "db.csv";
         File f = new File(filepath);
         File tmp = new File(tmpFile);
-        if(!f.exists()){
-            try {
-                f.createNewFile();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }else{
-            InputStreamReader reader = null;
-            BufferedReader layout = null;
-            OutputStreamWriter writer = null;
-            try{
-                writer = new OutputStreamWriter(new FileOutputStream(tmp,true));
-                List<Object> list = new ArrayList<Object>();
-                // id = 0 before save in file
-                list.add(0);
-                for(Field field : model.getClass().getFields()){
-                    Column column = field.getAnnotation(Column.class);
-                    if(column != null) {
-                       // Object value = field.get(model);
-                        if (field.getType() == null) { list.add("Null");
-                        } else {
-                            if (field.getType().equals(String.class)) {
-                                Object value = field.get(model);
-                                if (value.equals("")) { list.add("Empty");
-                                } else {//save in csv, make sure commas is unique
-                                    value = ((String) value).replaceAll(",", "#");
-                                    list.add(value);
-                                }
-                            } else if (field.getType().equals(int.class)
-                                    || field.getType().equals(boolean.class)) {
-                                list.add(field.get(model));
-                            } else { throw new UnsupportedClassVersionError(); }
-                        }
+        InputStreamReader reader = null;
+        BufferedReader layout = null;
+        OutputStreamWriter writer = null;
+        try{
+            writer = new OutputStreamWriter(new FileOutputStream(tmp,true));
+            List<Object> list = new ArrayList<Object>();
+            // id = 0 before save in file
+            list.add(0);
+            for(Field field : model.getClass().getFields()){
+                Column column = field.getAnnotation(Column.class);
+                if(column != null) {
+                   // Object value = field.get(model);
+                    if (field.getType() == null) { list.add("Null");
+                    } else {
+                        if (field.getType().equals(String.class)) {
+                            Object value = field.get(model);
+                            if (value.equals("")) { list.add("Empty");
+                            } else {//save in csv, make sure commas is unique
+                                value = ((String) value).replaceAll(",", "#");
+                                list.add(value);
+                            }
+                        } else if (field.getType().equals(int.class)
+                                || field.getType().equals(boolean.class)) {
+                            list.add(field.get(model));
+                        } else { throw new UnsupportedClassVersionError(); }
                     }
                 }
-                if(f.length()==0){
-                    this.unique_id = 1;
+            }
+            if(f.length()==0){
+                this.unique_id = 1;
+                list.set(0, this.unique_id);
+                for(Object data : list){
+                    String rowStr = data + ",";
+                    writer.write(rowStr);
+                }
+                writer.write("\r\n");
+                writer.close();
+            }else {
+                reader = new InputStreamReader(new FileInputStream(f));
+                layout = new BufferedReader(reader);
+                String line = null;
+                StringBuilder update = new StringBuilder();
+                String id = String.valueOf(this.unique_id);
+                int mark = 0;
+                int size = 1;
+
+                while (((line = layout.readLine())) != null){
+                    String[] cells = line.split(",");
+                    if(id.equals(cells[0])){
+                       // System.out.println("in db");
+                        mark = 1;
+                        list.set(0, this.unique_id);
+                        for(Object data : list){
+                            update.append(data);
+                            update.append(",");
+                        }
+                        line = line.replace(line,update.toString());
+                    }
+                    writer.write(line+"\r\n");
+                    size = size+1;
+                }
+                if(mark == 0){ // not in db
+                    if(this.unique_id != 0 ){
+                        throw new UnsupportedOperationException("not in db");
+                    }
+                    this.unique_id = size;
                     list.set(0, this.unique_id);
                     for(Object data : list){
                         String rowStr = data + ",";
                         writer.write(rowStr);
                     }
                     writer.write("\r\n");
-                    writer.close();
-                }else {
-                    reader = new InputStreamReader(new FileInputStream(f));
-                    layout = new BufferedReader(reader);
-                    String line = null;
-                    StringBuilder update = new StringBuilder();
-                    String id = String.valueOf(this.unique_id);
-                    int mark = 0;
-                    int size = 1;
-
-                    while (((line = layout.readLine())) != null){
-                        String[] cells = line.split(",");
-                        if(id.equals(cells[0])){
-                           // System.out.println("in db");
-                            mark = 1;
-                            list.set(0, this.unique_id);
-                            for(Object data : list){
-                                update.append(data);
-                                update.append(",");
-                            }
-                            line = line.replace(line,update.toString());
-                        }
-                        writer.write(line+"\r\n");
-                        size = size+1;
-                    }
-                    if(mark == 0){ // not in db
-                        if(this.unique_id != 0 ){
-                            throw new UnsupportedOperationException();
-                        }
-                        this.unique_id = size;
-                        list.set(0, this.unique_id);
-                        for(Object data : list){
-                            String rowStr = data + ",";
-                            writer.write(rowStr);
-                        }
-                        writer.write("\r\n");
-                    }
-                    layout.close();
-                    reader.close();
-                    writer.close();
                 }
-            }catch (IOException | IllegalAccessException e){
-                e.printStackTrace();
-            }finally {
-                try{
-                    if (layout!=null){ layout.close(); }
-                }catch (Exception e) { e.printStackTrace();}
-                try{
-                    if (reader!=null){ reader.close(); }
-                }catch (Exception e) { e.printStackTrace();}
-                try{
-                    if (writer!=null){ writer.close(); }
-                }catch (Exception e) { e.printStackTrace();}
-                f.delete();
-                File dump = new File(filepath);
-                tmp.renameTo(dump);
+                layout.close();
+                reader.close();
+                writer.close();
             }
+        }catch (IOException | IllegalAccessException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                if (layout!=null){ layout.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+            try{
+                if (reader!=null){ reader.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+            try{
+                if (writer!=null){ writer.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+            try {
+                if(!f.delete()){ f.delete(); }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            File dump = new File(filepath);
+            tmp.renameTo(dump);
         }
     }
 
@@ -180,44 +176,37 @@ public class Model {
         List<T> list = new ArrayList<T>();
         Field[] fields = c.getDeclaredFields();
         File f = new File("db.csv");
-        if(!f.exists()){
-            try {
-                f.createNewFile();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }else{
-            InputStreamReader reader = null;
-            BufferedReader layout = null;
-            try{
-                reader = new InputStreamReader(new FileInputStream(f));
-                layout = new BufferedReader(reader);
-                String line = null;
+        InputStreamReader reader = null;
+        BufferedReader layout = null;
+        try{
+            reader = new InputStreamReader(new FileInputStream(f));
+            layout = new BufferedReader(reader);
+            String line = null;
 
-                Constructor<?> cons = c.getDeclaredConstructor();
-                while (((line = layout.readLine())) != null){
-                    String[] cells = line.split(",");
-                    Object obj = cons.newInstance();
-                    T t = (T) obj;
-                    for(int k=0 ; k<fields.length; k++){
-                        if(fields[k].getType().equals(int.class)){
-                            fields[k].set(t,Integer.parseInt(cells[k+1]));
-                        }else{
-                            fields[k].set(t,cells[k]);
-                        }
+            Constructor<?> cons = c.getDeclaredConstructor();
+
+            while (((line = layout.readLine())) != null){
+                String[] cells = line.split(",");
+                Object obj = cons.newInstance();
+                T t = (T) obj;
+                for(int k=0 ; k<fields.length; k++){
+                    if(fields[k].getType().equals(int.class)){
+                        fields[k].set(t,Integer.parseInt(cells[k+1]));
+                    }else{
+                        fields[k].set(t,cells[k+1]);
                     }
-                    list.add(t);
                 }
-                layout.close();
-                reader.close();
-                }catch (Exception e) { e.printStackTrace();
-                } finally {
-                    try{ if (layout!=null){ layout.close(); }
-                        }catch (Exception e) { e.printStackTrace();}
-                    try{ if (reader!=null){ reader.close(); }
-                        }catch (Exception e) { e.printStackTrace();}
-                    }
+                list.add(t);
             }
+            layout.close();
+            reader.close();
+            }catch (Exception e) { e.printStackTrace();
+            } finally {
+                try{ if (layout!=null){ layout.close(); }
+                    }catch (Exception e) { e.printStackTrace();}
+                try{ if (reader!=null){ reader.close(); }
+                    }catch (Exception e) { e.printStackTrace();}
+                }
         return list;
     }
 
@@ -230,7 +219,7 @@ public class Model {
             else {
                 Model model = find(this.getClass(), this.unique_id);
                 if(model != null){
-                    //this model is found in db file
+                    //this model can be found in db file
                     //update the model
                     String tmpFile = "temp.csv";
                     String filepath = "db.csv";
@@ -270,9 +259,7 @@ public class Model {
                         File dump = new File(filepath);
                         newFile.renameTo(dump);
                     }
-                }else{
-                    throw new UnsupportedOperationException();
-                }
+                }else{ throw new UnsupportedOperationException(); }
             }
         }catch(Exception e){e.printStackTrace();}
     }

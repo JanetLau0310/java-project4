@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ed01fe-beab-42ca-abed-7cea561fa918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -16,12 +14,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Html.class" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Html.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Html.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Html.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/test/java/jrails/JRouterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/test/java/jrails/JRouterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main2">
+  <component name="RunManager" selected="Gradle.Tests in 'p4.jrails.test'">
     <configuration name="Main2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="books.Main" />
       <module name="p4.books.main" />
@@ -122,12 +117,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HtmlTest.empty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ModelTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;jrails.HtmlTest.empty&quot;" />
+        <option name="scriptParameters" value="--tests &quot;jrails.ModelTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ModelTest.myTest_b" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;jrails.ModelTest.myTest_b&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -182,26 +197,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ViewTest.empty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;jrails.ViewTest.empty&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jrails:cleanTest" />
-            <option value=":jrails:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="ViewTest.showBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -225,18 +220,18 @@
     <list>
       <item itemvalue="Application.Main2" />
       <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
-      <item itemvalue="Gradle.HtmlTest.empty" />
-      <item itemvalue="Gradle.ViewTest.empty" />
       <item itemvalue="Gradle.ViewTest" />
       <item itemvalue="Gradle.ViewTest.showBook" />
+      <item itemvalue="Gradle.ModelTest.myTest_b" />
+      <item itemvalue="Gradle.ModelTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
+        <item itemvalue="Gradle.ModelTest.myTest_b" />
+        <item itemvalue="Gradle.ModelTest" />
         <item itemvalue="Gradle.ViewTest" />
         <item itemvalue="Gradle.ViewTest.showBook" />
-        <item itemvalue="Gradle.ViewTest.empty" />
-        <item itemvalue="Gradle.HtmlTest.empty" />
-        <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
       </list>
     </recent_temporary>
   </component>
@@ -286,38 +281,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586986237187" />
-    <state width="989" height="427" key="GridCell.Tab.0.bottom" timestamp="1586986326328">
+    <state width="1492" height="242" key="GridCell.Tab.0.bottom" timestamp="1586990691772">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.0.center" timestamp="1586986326328">
+    <state width="1492" height="242" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586990691772" />
+    <state width="1492" height="242" key="GridCell.Tab.0.center" timestamp="1586990691772">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.0.left" timestamp="1586986326328">
+    <state width="1492" height="242" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586990691772" />
+    <state width="1492" height="242" key="GridCell.Tab.0.left" timestamp="1586990691772">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.0.right" timestamp="1586986326328">
+    <state width="1492" height="242" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586990691772" />
+    <state width="1492" height="242" key="GridCell.Tab.0.right" timestamp="1586990691772">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.1.bottom" timestamp="1586986326329">
+    <state width="1492" height="242" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586990691772" />
+    <state width="1492" height="287" key="GridCell.Tab.1.bottom" timestamp="1586990589581">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586986326329" />
-    <state width="989" height="427" key="GridCell.Tab.1.center" timestamp="1586986326328">
+    <state width="1492" height="287" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586990589581" />
+    <state width="1492" height="287" key="GridCell.Tab.1.center" timestamp="1586990589581">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.1.left" timestamp="1586986326328">
+    <state width="1492" height="287" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586990589581" />
+    <state width="1492" height="287" key="GridCell.Tab.1.left" timestamp="1586990589581">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
-    <state width="989" height="427" key="GridCell.Tab.1.right" timestamp="1586986326328">
+    <state width="1492" height="287" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586990589581" />
+    <state width="1492" height="287" key="GridCell.Tab.1.right" timestamp="1586990589581">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="989" height="427" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586986326328" />
+    <state width="1492" height="287" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586990589581" />
     <state x="373" y="2" width="1038" height="707" key="SettingsEditor" timestamp="1586912011139">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -348,11 +343,6 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>230</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/books/src/main/java/books/BookController.java</url>
           <line>18</line>
           <option name="timeStamp" value="30" />
@@ -373,11 +363,6 @@
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/JServer.java</url>
           <line>45</line>
           <option name="timeStamp" value="40" />
@@ -387,16 +372,41 @@
           <line>54</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>219</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
-        <watch expression="params" language="JAVA" />
-        <watch expression="t.getRequestURI()" language="JAVA" />
-        <watch expression="t.getRequestMethod()" language="JAVA" />
-        <watch expression="RouterMap" language="JAVA" />
-        <watch expression="result" language="JAVA" />
-        <watch expression="fields" language="JAVA" />
+        <watch expression="unique_id" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

@@ -31,7 +31,7 @@ public class ModelTest {
         b2.author = "";
         b2.num_copies = 0;
         b2.save();
-        //b2.destroy();
+        b2.destroy();
 
         b3.title = "12 Rules,for Life";
         b3.author = "Jordan B. Peterson";
@@ -40,9 +40,8 @@ public class ModelTest {
 
         b1.num_copies = 101;
         b1.save();
-        assert(Model.find(Book.class,10) == null);
-       // assert(Model.all(Book.class).size() == 2);
-        //Model.reset();
+        assert(Model.find(Book.class,0) == null);
+        assert(Model.all(Book.class).size() == 2);
     }
 
     @Test
@@ -53,5 +52,6 @@ public class ModelTest {
 
     @After
     public void tearDown() throws Exception {
+        Model.reset();
     }
 }

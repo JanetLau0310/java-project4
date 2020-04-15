@@ -20,9 +20,11 @@ public class Html {
     }
 
     public Html seq(Html h) {
-        if(this.html == null)
+        if(this.html == null){
             return new Html(h.toString());
-        return new Html(this.html + h.toString());
+        }else{
+            return new Html(this.html + h.toString());
+        }
         //combine this and h
     }
 

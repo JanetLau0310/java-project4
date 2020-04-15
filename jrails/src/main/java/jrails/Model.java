@@ -17,7 +17,11 @@ public class Model {
         File f = new File(filepath);
         File tmp = new File(tmpFile);
         if(!f.exists()){
-            throw new UnsupportedOperationException();
+            try {
+                f.createNewFile();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }else{
             InputStreamReader reader = null;
             BufferedReader layout = null;
@@ -120,63 +124,68 @@ public class Model {
         return this.unique_id;
     }
     //check the db for given id, if not,return null;
-    public static <T extends Model> T find(Class<T> c, int id) throws Exception {
-        Field[] fields = c.getDeclaredFields();
-        Object obj = c.getDeclaredConstructor().newInstance();
-        T t = (T) obj;
+    public static <T extends Model> T find(Class<T> c, int id) {
         File f = new File("db.csv");
-        f.createNewFile();
-        if(!f.exists()){
-            throw new UnsupportedOperationException();
-        }else{
-            InputStreamReader reader = null;
-            BufferedReader layout = null;
-            try{
-                reader = new InputStreamReader(new FileInputStream(f));
-                layout = new BufferedReader(reader);
-                String line = null;
-                int mark = 0;
-                while (((line = layout.readLine())) != null){
-                    String[] cells = line.split(",");
-                    if(cells[0].equals(String.valueOf(id))) {
-                        mark = 1;
-                        for(int k=0 ; k<fields.length; k++){
-                            if(fields[k].getType().equals(int.class)){
-                                fields[k].set(t,Integer.parseInt(cells[k+1]));
-                            }else{
-                                fields[k].set(t,cells[k]);
-                            }
+        T t = null;
+        if(!f.exists()) {
+            try {
+                f.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        InputStreamReader reader = null;
+        BufferedReader layout = null;
+        try{
+            Field[] fields = c.getDeclaredFields();
+            Object obj = c.getDeclaredConstructor().newInstance();
+            t = (T) obj;
+            reader = new InputStreamReader(new FileInputStream(f));
+            layout = new BufferedReader(reader);
+            String line = null;
+            int mark = 0;
+            while (((line = layout.readLine())) != null){
+                String[] cells = line.split(",");
+                if(cells[0].equals(String.valueOf(id))) {
+                    mark = 1;
+                    for(int k=0 ; k<fields.length; k++){
+                        if(fields[k].getType().equals(int.class)){
+                            fields[k].set(t,Integer.parseInt(cells[k+1]));
+                        }else{
+                            fields[k].set(t,cells[k]);
                         }
                     }
                 }
-                if( mark == 0 ){ return null; }
-                layout.close();
-                reader.close();
-            }catch (Exception e) {
-                e.printStackTrace();
-            }finally {
-                try{
-                    if (layout!=null){ layout.close(); }
-                }catch (Exception e) { e.printStackTrace();}
-
-                try{
-                    if (reader!=null){ reader.close(); }
-                }catch (Exception e) { e.printStackTrace();}
             }
+            if( mark == 0 ){ return null; }
+            layout.close();
+            reader.close();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                if (layout!=null){ layout.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+
+            try{
+                if (reader!=null){ reader.close(); }
+            }catch (Exception e) { e.printStackTrace();}
         }
-        return t;
+        return t; 
     }
 
     //similar to find, return all instances of class
-    public static <T extends Model> List<T> all(Class<T> c)throws Exception {
+    public static <T extends Model> List<T> all(Class<T> c) {
         // Returns a List<element type>
         List<T> list = new ArrayList<T>();
         Field[] fields = c.getDeclaredFields();
-
         File f = new File("db.csv");
-        f.createNewFile();
         if(!f.exists()){
-            throw new UnsupportedOperationException();
+            try {
+                f.createNewFile();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }else{
             InputStreamReader reader = null;
             BufferedReader layout = null;

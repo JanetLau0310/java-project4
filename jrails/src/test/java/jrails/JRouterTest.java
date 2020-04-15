@@ -28,6 +28,6 @@ public class JRouterTest {
         jRouter.addRoute("POST", "/create", BookController.class, "create");
        /* HashMap<String,String> test = new HashMap<>();
         test.put("id","42");
-        jRouter.route("GET","/show",test);*/
+        jRouter.route("GET","/edit",test);*/
     }
 }

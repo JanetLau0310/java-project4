@@ -73,9 +73,4 @@ public class View {
         //e.g., submit("Save") should produce <input type="submit" value="Save"/>.
         return final_html.submit(value);
     }
-
-/*    public static void main(String[] args) {
-        Html html = new Html();
-        System.out.println(View.empty().br().toString());
-    }*/
 }

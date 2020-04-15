@@ -12,8 +12,8 @@ public class Model {
     public void save() throws IOException {
         //this is an instance of current model
         Model model = this;
-        String tmpFile = "d:/temp.csv";
-        String filepath = "d:/db.csv";
+        String tmpFile = "temp.csv";
+        String filepath = "db.csv";
         File f = new File(filepath);
         File tmp = new File(tmpFile);
         f.createNewFile();
@@ -125,7 +125,7 @@ public class Model {
         Field[] fields = c.getDeclaredFields();
         Object obj = c.getDeclaredConstructor().newInstance();
         T t = (T) obj;
-        File f = new File("d:/db.csv");
+        File f = new File("db.csv");
         f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
@@ -174,7 +174,7 @@ public class Model {
         List<T> list = new ArrayList<T>();
         Field[] fields = c.getDeclaredFields();
 
-        File f = new File("d:/db.csv");
+        File f = new File("db.csv");
         f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
@@ -272,7 +272,7 @@ public class Model {
     //remove all rows from db
     public static void reset() {
         try{
-            File f = new File("d:/db.csv");
+            File f = new File("db.csv");
             if(!f.delete()){
                 System.gc();
                 f.delete();

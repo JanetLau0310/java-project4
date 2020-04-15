@@ -193,7 +193,7 @@ public class View {
         //return html submit button with given value
         //e.g., submit("Save") should produce <input type="submit" value="Save"/>.
         Html html = new Html();
-        String button = " <input type=\"submit\" " + "value=\"" + value + "\"/>";
+        String button = " <input type=\"submit\" " + "value=\"" + value + "\""+"/>";
         if(html.final_html != null){
             html.final_html = html.final_html + button;
         }else {

@@ -46,7 +46,7 @@ public class JRouter {
         String[] cls_method = getRoute(verb, path).split("#");
         Class<?> cls = Class.forName(cls_method[0]);
         Method[] methods = cls.getMethods();
-        //System.out.println(Arrays.toString(methods));
+        System.out.println(Arrays.toString(methods));
         for(Method k : methods){
             if(k.getName().equals(cls_method[1])){
                 return (Html) k.invoke(null,params);

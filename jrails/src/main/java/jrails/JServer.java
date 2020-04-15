@@ -18,10 +18,10 @@ import java.util.stream.Collectors;
 public class JServer {
     public static void start(JRouter r) {
         try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+            HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
             server.createContext("/", new Handler(r));
             server.setExecutor(null);
-            System.out.println("Starting server...point your web browser to http://localhost:8000");
+            System.out.println("Starting server...point your web browser to http://localhost:8080");
 	    System.out.flush();
             server.start();
         } catch (IOException e) {

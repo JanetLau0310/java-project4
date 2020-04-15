@@ -14,7 +14,6 @@ public class Main {
         r.addRoute("POST", "/update", BookController.class, "update");
         r.addRoute("GET", "/destroy", BookController.class, "destroy");
         // Should be DELETE but no way to do that with a link
-
         JServer.start(r);
     }
 }

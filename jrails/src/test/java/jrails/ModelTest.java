@@ -27,11 +27,11 @@ public class ModelTest {
         b1.num_copies = 100;
         b1.save();
 
-        b2.title = "12 Rules,for Life";
-        b2.author = "Jordan B. Peterson";
-        b2.num_copies = 10;
+        b2.title = "";
+        b2.author = "";
+        b2.num_copies = 0;
         b2.save();
-        b2.destroy();
+        //b2.destroy();
 
         b3.title = "12 Rules,for Life";
         b3.author = "Jordan B. Peterson";

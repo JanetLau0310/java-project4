@@ -12,8 +12,8 @@ public class Model {
     public void save() throws IOException {
         //this is an instance of current model
         Model model = this;
-        String tmpFile = "temp.csv";
-        String filepath = "db.csv";
+        String tmpFile = "d:/temp.csv";
+        String filepath = "d:/db.csv";
         File f = new File(filepath);
         File tmp = new File(tmpFile);
         f.createNewFile();
@@ -31,18 +31,19 @@ public class Model {
                 for(Field field : model.getClass().getFields()){
                     Column column = field.getAnnotation(Column.class);
                     if(column != null) {
-                        Object value = field.get(model);
-                        if (value == null) { list.add("Null");
+                       // Object value = field.get(model);
+                        if (field.getType() == null) { list.add("Null");
                         } else {
-                            if (value.getClass().equals(String.class)) {
+                            if (field.getType().equals(String.class)) {
+                                Object value = field.get(model);
                                 if (value.equals("")) { list.add("Empty");
                                 } else {//save in csv, make sure commas is unique
                                     value = ((String) value).replaceAll(",", "#");
                                     list.add(value);
                                 }
-                            } else if (value.getClass().equals(Integer.class)
-                                    || value.getClass().equals(boolean.class)) {
-                                list.add(value);
+                            } else if (field.getType().equals(int.class)
+                                    || field.getType().equals(boolean.class)) {
+                                list.add(field.get(model));
                             } else { throw new UnsupportedClassVersionError(); }
                         }
                     }
@@ -68,7 +69,7 @@ public class Model {
                     while (((line = layout.readLine())) != null){
                         String[] cells = line.split(",");
                         if(id.equals(cells[0])){
-                            System.out.println("in db");
+                           // System.out.println("in db");
                             mark = 1;
                             list.set(0, this.unique_id);
                             for(Object data : list){
@@ -124,7 +125,8 @@ public class Model {
         Field[] fields = c.getDeclaredFields();
         Object obj = c.getDeclaredConstructor().newInstance();
         T t = (T) obj;
-        File f = new File("db.csv");
+        File f = new File("d:/db.csv");
+        f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
         }else{
@@ -172,7 +174,7 @@ public class Model {
         List<T> list = new ArrayList<T>();
         Field[] fields = c.getDeclaredFields();
 
-        File f = new File("db.csv");
+        File f = new File("d:/db.csv");
         f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
@@ -270,7 +272,7 @@ public class Model {
     //remove all rows from db
     public static void reset() {
         try{
-            File f = new File("db.csv");
+            File f = new File("d:/db.csv");
             if(!f.delete()){
                 System.gc();
                 f.delete();

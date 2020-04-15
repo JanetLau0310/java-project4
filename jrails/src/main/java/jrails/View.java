@@ -153,7 +153,8 @@ public class View {
 
     public static Html textarea(String name, Html child) {
         Html html = new Html();
-        String s1 = "<textarea " + name + ">";
+        //<textarea name="title">
+        String s1 = "<textarea name=\"" + name + "\">";
         String s2 = "</textarea>";
         if(child == null){
             html.final_html = s1 + "" + s2;

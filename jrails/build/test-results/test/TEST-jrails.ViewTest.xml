@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jrails.ViewTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-15T20:27:56" hostname="URNOTCHRISLEE" time="0.031">
+<testsuite name="jrails.ViewTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-15T20:44:18" hostname="URNOTCHRISLEE" time="0.033">
   <properties/>
-  <testcase name="showBook" classname="jrails.ViewTest" time="0.027"/>
+  <testcase name="showBook" classname="jrails.ViewTest" time="0.032"/>
   <testcase name="p" classname="jrails.ViewTest" time="0.001"/>
-  <testcase name="empty" classname="jrails.ViewTest" time="0.003"/>
+  <testcase name="empty" classname="jrails.ViewTest" time="0.0"/>
   <system-out><![CDATA[Title:
 Programming Languages: Build, Prove, and Compare
 Author:

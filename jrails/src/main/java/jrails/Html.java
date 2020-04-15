@@ -31,7 +31,7 @@ public class Html {
     }
 
     public Html t(Object o) {
-        System.out.println(o.toString());
+       // System.out.println(o.toString());
         String text = o.toString();
         return seq(new Html(text));
         // Use o.toString() to get the text for this

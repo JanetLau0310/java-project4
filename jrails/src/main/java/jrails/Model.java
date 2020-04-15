@@ -173,6 +173,7 @@ public class Model {
         Field[] fields = c.getDeclaredFields();
 
         File f = new File("db.csv");
+        f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
         }else{

@@ -19,7 +19,7 @@ public class JRouter {
         }
         String request = verb + path;
         Object[] Clazz_method = new Object[2];
-        Clazz_method[0] = (Object)clazz.getSimpleName();
+        Clazz_method[0] = (Object) clazz;
         Clazz_method[1] = (Object)method;
         RouterMap.put(request,Clazz_method);
         // Table mapping work
@@ -32,8 +32,8 @@ public class JRouter {
             return null;
         }
         Object[] Clazz_method = RouterMap.get(request);
-        String result = (String)Clazz_method[0] + "#" + (String)Clazz_method[1];
-
+        Class cls = (Class)Clazz_method[0];
+        String result = cls.getName() + "#" + (String)Clazz_method[1];
         return result;
     }
     // Call the appropriate controller method and
@@ -44,13 +44,12 @@ public class JRouter {
             throw new UnsupportedOperationException();
         }
         String[] cls_method = getRoute(verb, path).split("#");
-        //System.out.println(cls_method[0]);
         Class<?> cls = Class.forName(cls_method[0]);
         Method[] methods = cls.getMethods();
         //System.out.println(Arrays.toString(methods));
         for(Method k : methods){
             if(k.getName().equals(cls_method[1])){
-                return (Html) k.invoke(params);
+                return (Html) k.invoke(null,params);
             }
         }
         throw new UnsupportedOperationException();

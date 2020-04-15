@@ -4,92 +4,97 @@ public class Html {
     //a data structure represent HTML
     //an Html object has as instance methods
     // all the same tag methods as View, which are used to sequence HTML
-    public String final_html;
-    public Html(){}
-    public Html(String s) {
-        this.final_html = s;
+    public String html;
+    public Html(String s){
+        this.html = s;
     }
-
+    public Html(){}
     public String toString() {
-        return final_html;
+        return this.html;
         //return a string contains the corresponding HTML
     }
 
-    public Html empty() throws Exception {
+    public Html empty() {
         //html.empty().toString() => ""
-        return View.empty();
+        return seq(new Html(""));
     }
 
     public Html seq(Html h) {
-        String combine = this.final_html + h.final_html;
-        return new Html(combine);
+        if(this.html == null)
+            return new Html(h.toString());
+        return new Html(this.html + h.toString());
         //combine this and h
     }
 
     public Html br() {
-        return View.br();
+        return seq(new Html("<br/>"));
     }
 
     public Html t(Object o) {
-        return View.t(o);
+        System.out.println(o.toString());
+        String text = o.toString();
+        return seq(new Html(text));
         // Use o.toString() to get the text for this
     }
 
     public Html p(Html child) {
         //return a new object
-       return View.p(child);
+       return seq(new Html("<p>"+child.toString()+"</p>"));
     }
 
     public Html div(Html child) {
-        return View.div(child);
+        return seq(new Html("<div>"+child.toString()+"</div>"));
     }
 
     public Html strong(Html child) {
-        return View.strong(child);
+        return seq(new Html("<strong>"+child.toString()+"</strong>"));
     }
 
     public Html h1(Html child) {
-        return View.h1(child);
+        return seq(new Html("<h1>"+child.toString()+"</h1>"));
     }
 
     public Html tr(Html child) {
-        return View.tr(child);
+        return seq(new Html("<tr>"+child.toString()+"</tr>"));
     }
 
     public Html th(Html child) {
-        return View.th(child);
+        return seq(new Html("<th>"+child.toString()+"</th>"));
     }
 
     public Html td(Html child) {
-        return View.td(child);
+        return seq(new Html("<td>"+child.toString()+"</td>"));
     }
 
     public Html table(Html child) {
-        return View.table(child);
+        return seq(new Html("<table>"+child.toString()+"</table>"));
     }
 
     public Html thead(Html child) {
-        return View.thead(child);
+        return seq(new Html("<thead>"+child.toString()+"</thead>"));
     }
 
     public Html tbody(Html child) {
-        return View.tbody(child);
+        return seq(new Html("<tbody>"+child.toString()+"</tbody>"));
     }
 
     public Html textarea(String name, Html child) {
-        return View.textarea(name,child);
+        return seq(new Html("<textarea name=\""+name+"\">"+child.toString()+"</textarea>"));
     }
 
     public Html link_to(String text, String url) {
-        return View.link_to(text, url);
+        return seq(new Html("<a href=\"" + url + "\">" + text + "</a>"));
     }
 
     public Html form(String action, Html child) {
-        return View.form(action, child);
+        String s1 = "<form action=\"" + action + "\" accept-charset=\"UTF-8\" method=\"post\">";
+        String s2 = "</form>";
+        return seq(new Html(s1 + child.toString() + s2));
     }
 
     public Html submit(String value) {
-        return View.submit(value);
+        String button = " <input type=\"submit\" " + "value=\"" + value + "\""+"/>";
+        return seq(new Html(button));
     }
 
 }

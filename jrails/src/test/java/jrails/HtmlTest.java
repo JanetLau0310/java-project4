@@ -11,7 +11,7 @@ public class HtmlTest {
     private Html html;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         html = new Html();
     }
 

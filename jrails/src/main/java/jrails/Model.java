@@ -9,14 +9,13 @@ import java.util.*;
 public class Model {
     private int unique_id;
 
-    public void save() throws IOException {
+    public void save() {
         //this is an instance of current model
         Model model = this;
         String tmpFile = "temp.csv";
         String filepath = "db.csv";
         File f = new File(filepath);
         File tmp = new File(tmpFile);
-        f.createNewFile();
         if(!f.exists()){
             throw new UnsupportedOperationException();
         }else{

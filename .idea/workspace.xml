@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="48ed01fe-beab-42ca-abed-7cea561fa918" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/jrails">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p4" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p4" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p4" type="f1a62948:ProjectNode" />
+                <item name="jrails" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p4" type="f1a62948:ProjectNode" />
+                <item name="jrails" type="2d1252cf:ModuleNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="p4" type="f1a62948:ProjectNode" />
+                <item name="jrails" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="p4" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1aTQ1IHSCxc995mrtOhLYSwEEnm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../p3" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.Main2">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="books.Main" />
+      <module name="p4.books.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="books.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="books.Main" />
+      <module name="p4.books.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JRouterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;jrails.JRouterTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JRouterTest.router" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;jrails.JRouterTest.router&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'p4.jrails.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="gradlew" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/gradlew" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main2" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.JRouterTest" />
+      <item itemvalue="Gradle.JRouterTest.router" />
+      <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
+      <item itemvalue="Shell Script.gradlew" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
+        <item itemvalue="Gradle.JRouterTest.router" />
+        <item itemvalue="Gradle.JRouterTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Shell Script.gradlew" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48ed01fe-beab-42ca-abed-7cea561fa918" name="Default Changelist" comment="" />
+      <created>1586756886386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586756886386</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="125" key="#Inspections" timestamp="1586845148147">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="440" y="125" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1586845148147" />
+    <state x="402" y="97" key="#Project_Structure" timestamp="1586788066256">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="402" y="97" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1586788066256" />
+    <state x="431" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586914772056">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1586914772056" />
+    <state x="46" y="231" width="995" height="670" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586904255776">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="46" y="231" width="995" height="670" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.864@0.0.1536.864" timestamp="1586904255776" />
+    <state x="822" y="137" key="#com.intellij.ide.util.MemberChooser" timestamp="1586913323463">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="822" y="137" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1586913323463" />
+    <state x="706" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586914732766">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="706" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1586914732766" />
+    <state x="1143" y="304" width="393" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586798588722">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="1143" y="304" width="393" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1586798588722" />
+    <state x="812" y="188" key="FileChooserDialogImpl" timestamp="1586913547858">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586913547858" />
+    <state width="1219" height="62" key="GridCell.Tab.0.bottom" timestamp="1586915742508">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1219" height="62" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586915742508" />
+    <state width="1219" height="62" key="GridCell.Tab.0.center" timestamp="1586915742508">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1219" height="62" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586915742508" />
+    <state width="1219" height="62" key="GridCell.Tab.0.left" timestamp="1586915742507">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1219" height="62" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586915742507" />
+    <state width="1219" height="62" key="GridCell.Tab.0.right" timestamp="1586915742508">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1219" height="62" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586915742508" />
+    <state width="1492" height="229" key="GridCell.Tab.1.bottom" timestamp="1586915742501">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="229" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586915742501" />
+    <state width="1492" height="229" key="GridCell.Tab.1.center" timestamp="1586915742500">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="229" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586915742500" />
+    <state width="1492" height="229" key="GridCell.Tab.1.left" timestamp="1586915742500">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="229" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586915742500" />
+    <state width="1492" height="229" key="GridCell.Tab.1.right" timestamp="1586915742500">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="229" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586915742500" />
+    <state x="373" y="2" width="1038" height="707" key="SettingsEditor" timestamp="1586912011139">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="373" y="2" width="1038" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586912011139" />
+    <state x="418" y="62" key="new project wizard" timestamp="1586811852369">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="418" y="62" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1586811852369" />
+    <state x="462" y="200" key="run.anything.popup" timestamp="1586827751784">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="462" y="200" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1586827751784" />
+    <state x="463" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1586907802575">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="463" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1586907802575" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Html.java</url>
+          <line>78</line>
+          <properties class="jrails.Html" method="textarea">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

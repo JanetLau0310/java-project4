@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jrails.ModelTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-04-15T01:31:48" hostname="URNOTCHRISLEE" time="0.03">
+  <properties/>
+  <testcase name="myTest_b" classname="jrails.ModelTest" time="0.027"/>
+  <testcase name="id" classname="jrails.ModelTest" time="0.002"/>
+  <system-out><![CDATA[in db
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

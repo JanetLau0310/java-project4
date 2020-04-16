@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static jrails.View.t;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.isEmptyString;
 import static org.junit.Assert.*;
@@ -27,14 +28,15 @@ public class ViewTest {
 
     @Test
     public void p() {
-        assertThat(View.p(View.t("abc")).toString(), is("<p>abc</p>"));
+
+        assertThat(View.p(t("abc")).toString(), is("<p>abc</p>"));
     }
 
     @Test
     public void showBook(){
-        assertThat(View.p(View.strong(View.t("Title:")).t(b.title)).
-                p(View.strong(View.t("Author:")).t(b.author)).
-                p(View.strong(View.t("Copies:")).t(b.num_copies)).
+        assertThat(View.p(View.strong(t("Title:")).t(b.title)).
+                p(View.strong(t("Author:")).t(b.author)).
+                p(View.strong(t("Copies:")).t(b.num_copies)).
                 t(View.link_to("Edit", "/edit")).t(" | ").
                 t(View.link_to("Back", "/")).toString(), is(
                         "<p><strong>Title:</strong>Programming Languages: Build, Prove, and Compare</p>" +

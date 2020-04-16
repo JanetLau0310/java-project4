@@ -33,31 +33,31 @@ public class View {
     }
 
     public static Html tr(Html child) {
-        return final_html.h1(child);
+        return final_html.tr(child);
     }
 
     public static Html th(Html child) {
-        return final_html.h1(child);
+        return final_html.th(child);
     }
 
     public static Html td(Html child) {
-        return final_html.h1(child);
+        return final_html.td(child);
     }
 
     public static Html table(Html child) {
-        return final_html.h1(child);
+        return final_html.table(child);
     }
 
     public static Html thead(Html child) {
-        return final_html.h1(child);
+        return final_html.thead(child);
     }
 
     public static Html tbody(Html child) {
-        return final_html.h1(child);
+        return final_html.tbody(child);
     }
 
     public static Html textarea(String name, Html child) {
-        return final_html.h1(child);
+        return final_html.textarea(name,child);
     }
 
     public static Html link_to(String text, String url) {

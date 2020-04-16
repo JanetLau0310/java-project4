@@ -152,9 +152,10 @@ public class Model {
                         if(fields[k].getType().equals(int.class)){
                             fields[k].set(t,Integer.parseInt(cells[k+1]));
                         }else if (fields[k].getType().equals(String.class)){
-                            String tmp = cells[k+1];
-                            tmp = tmp.replaceAll("#", ",");
+                            String tmp = cells[k+1].replaceAll("#", ",");
                             fields[k].set(t,tmp);
+                        }else{
+                            fields[k].set(t,cells[k+1]);
                         }
                     }
                 }
@@ -199,6 +200,9 @@ public class Model {
                 for(int k=0 ; k<fields.length; k++){
                     if(fields[k].getType().equals(int.class)){
                         fields[k].set(t,Integer.parseInt(cells[k+1]));
+                    }else if (fields[k].getType().equals(String.class)){
+                        String tmp = cells[k+1].replaceAll("#", ",");
+                        fields[k].set(t,tmp);
                     }else{
                         fields[k].set(t,cells[k+1]);
                     }

@@ -12,25 +12,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/src/main/java/books/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/books/src/main/java/books/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/classes/java/test/jrails/ModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/classes/java/test/jrails/ModelTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.HtmlTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.JRouterTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ModelTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ModelTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ViewTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/packages/jrails.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/packages/jrails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.HtmlTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.JRouterTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ModelTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ViewTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,8 +229,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ModelTest" />
         <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
+        <item itemvalue="Gradle.ModelTest" />
         <item itemvalue="Gradle.ModelTest.myTest_b" />
         <item itemvalue="Gradle.ViewTest" />
         <item itemvalue="Gradle.ViewTest.showBook" />
@@ -295,22 +283,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586986237187" />
-    <state width="1492" height="212" key="GridCell.Tab.0.bottom" timestamp="1587000372904">
+    <state width="1492" height="589" key="GridCell.Tab.0.bottom" timestamp="1587000574735">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="212" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587000372904" />
-    <state width="1492" height="212" key="GridCell.Tab.0.center" timestamp="1587000372904">
+    <state width="1492" height="589" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587000574735" />
+    <state width="1492" height="589" key="GridCell.Tab.0.center" timestamp="1587000574734">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="212" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587000372904" />
-    <state width="1492" height="212" key="GridCell.Tab.0.left" timestamp="1587000372904">
+    <state width="1492" height="589" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587000574734" />
+    <state width="1492" height="589" key="GridCell.Tab.0.left" timestamp="1587000574734">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="212" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587000372904" />
-    <state width="1492" height="212" key="GridCell.Tab.0.right" timestamp="1587000372904">
+    <state width="1492" height="589" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587000574734" />
+    <state width="1492" height="589" key="GridCell.Tab.0.right" timestamp="1587000574734">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="212" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587000372904" />
+    <state width="1492" height="589" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587000574734" />
     <state width="1492" height="222" key="GridCell.Tab.1.bottom" timestamp="1587000372904">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

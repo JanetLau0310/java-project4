@@ -242,7 +242,7 @@ public class Model {
     public void destroy() {
         try {
             //if not save to db before
-            if (this.unique_id == 0 || find(this.getClass(),this.id()) == null) {
+            if (find(this.getClass(),this.id()) == null) {
                 throw new Exception();
             }
             else {

@@ -33,11 +33,12 @@ public class Model {
             for(Field field : model.getClass().getFields()){
                 Column column = field.getAnnotation(Column.class);
                 if(column != null) {
-                    if (field.getType() == null) { list.add("Null");
+                    if (field.getType() == null) {
+                        list.add("Null");
                     } else {
                         if (field.getType().equals(String.class)) {
                             Object value = field.get(model);
-                            if (value.equals("")) { list.add("Empty");
+                            if (value.toString().isEmpty()) { list.add("Empty");
                             } else {//save in csv, make sure commas is unique
                                 value = ((String) value).replaceAll(",", "#");
                                 list.add(value);
@@ -153,6 +154,8 @@ public class Model {
                             fields[k].set(t,Integer.parseInt(cells[k+1]));
                         }else if (fields[k].getType().equals(String.class)){
                             String tmp = cells[k+1].replaceAll("#", ",");
+                            tmp = tmp.replaceAll("Empty","");
+                            tmp = tmp.replaceAll("Null",null);
                             fields[k].set(t,tmp);
                         }else{
                             fields[k].set(t,cells[k+1]);
@@ -202,6 +205,8 @@ public class Model {
                         fields[k].set(t,Integer.parseInt(cells[k+1]));
                     }else if (fields[k].getType().equals(String.class)){
                         String tmp = cells[k+1].replaceAll("#", ",");
+                        tmp = tmp.replaceAll("Empty","");
+                        tmp = tmp.replaceAll("Null",null);
                         fields[k].set(t,tmp);
                     }else{
                         fields[k].set(t,cells[k+1]);

@@ -27,8 +27,8 @@ public class ModelTest {
         b1.num_copies = 100;
         b1.save();
 
-        b2.title = "12 Rules for Life";
-        b2.author = "Jordan B. Peterson";
+        b2.title = "";
+        b2.author = "";
         b2.num_copies = 10;
         b2.save();
 
@@ -37,6 +37,7 @@ public class ModelTest {
         b3.num_copies = 10;
         b3.save();
 
+        Model.find(Book.class,2);
         assert(b1.id()!=b2.id());
        // b2.destroy();
         assert(Model.find(Book.class,0) == null);

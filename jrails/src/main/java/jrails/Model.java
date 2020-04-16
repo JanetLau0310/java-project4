@@ -240,56 +240,54 @@ public class Model {
     //remove the receiver from db
     //if receiver not save to db before, raise exception
     public void destroy() {
+        //if not save to db before
+        if (this.unique_id == 0 || find(this.getClass(),this.id()) == null) {
+            throw new UnsupportedOperationException();
+        }
         try {
-            //if not save to db before
-            if (find(this.getClass(),this.id()) == null) {
-                throw new Exception();
-            }
-            else {
-                Model model = find(this.getClass(), this.unique_id);
-                if(model != null){
-                    //this model can be found in db file
-                    //update the model
-                    String tmpFile = "temp.csv";
-                    String filepath = "db.csv";
-                    File oldFile = new File(filepath);
-                    File newFile = new File(tmpFile);
-                    OutputStreamWriter fw = null;
-                    InputStreamReader reader = null;
-                    BufferedReader layout = null;
-                    try{
-                        reader = new InputStreamReader(new FileInputStream(oldFile));
-                        layout = new BufferedReader(reader);
-                        fw = new OutputStreamWriter(new FileOutputStream(newFile,true));
+            Model model = find(this.getClass(), this.unique_id);
+            if(model != null){
+                //this model can be found in db file
+                //update the model
+                String tmpFile = "temp.csv";
+                String filepath = "db.csv";
+                File oldFile = new File(filepath);
+                File newFile = new File(tmpFile);
+                OutputStreamWriter fw = null;
+                InputStreamReader reader = null;
+                BufferedReader layout = null;
+                try{
+                    reader = new InputStreamReader(new FileInputStream(oldFile));
+                    layout = new BufferedReader(reader);
+                    fw = new OutputStreamWriter(new FileOutputStream(newFile,true));
 
-                        String line = null;
-                        while (((line = layout.readLine())) != null){
-                            String[] cells = line.split(",");
-                            if(!(cells[0].equals(String.valueOf(this.unique_id)))) {
-                                fw.write(line+"\r\n");
-                            }
+                    String line = null;
+                    while (((line = layout.readLine())) != null){
+                        String[] cells = line.split(",");
+                        if(!(cells[0].equals(String.valueOf(this.unique_id)))) {
+                            fw.write(line+"\r\n");
                         }
-                        fw.flush();
-                        fw.close();
-                        layout.close();
-                        reader.close();
-                    }catch (Exception e) { e.printStackTrace();
-                    }finally {
-                        try{
-                            if (layout!=null){ layout.close(); }
-                        }catch (Exception e) { e.printStackTrace();}
-                        try{
-                            if (reader!=null){ reader.close(); }
-                        }catch (Exception e) { e.printStackTrace();}
-                        try{
-                            if (fw!=null){ fw.close(); }
-                        }catch (Exception e) { e.printStackTrace();}
-                        oldFile.delete();
-                        File dump = new File(filepath);
-                        newFile.renameTo(dump);
                     }
-                }else{ throw new UnsupportedOperationException(); }
-            }
+                    fw.flush();
+                    fw.close();
+                    layout.close();
+                    reader.close();
+                }catch (Exception e) { e.printStackTrace();
+                }finally {
+                    try{
+                        if (layout!=null){ layout.close(); }
+                    }catch (Exception e) { e.printStackTrace();}
+                    try{
+                        if (reader!=null){ reader.close(); }
+                    }catch (Exception e) { e.printStackTrace();}
+                    try{
+                        if (fw!=null){ fw.close(); }
+                    }catch (Exception e) { e.printStackTrace();}
+                    oldFile.delete();
+                    File dump = new File(filepath);
+                    newFile.renameTo(dump);
+                }
+            }else{ throw new UnsupportedOperationException(); }
         }catch(Exception e){e.printStackTrace();}
     }
 

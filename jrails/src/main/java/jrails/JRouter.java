@@ -38,18 +38,29 @@ public class JRouter {
     }
     // Call the appropriate controller method and
     // return the result
-    public Html route(String verb, String path, Map<String, String> params) throws Exception {
+    public Html route(String verb, String path, Map<String, String> params) {
         String request = verb + path;
         if(RouterMap.isEmpty() || !RouterMap.containsKey(request)){
             throw new UnsupportedOperationException();
         }
         String[] cls_method = getRoute(verb, path).split("#");
-        Class<?> cls = Class.forName(cls_method[0]);
+        Class<?> cls = null;
+        try {
+            cls = Class.forName(cls_method[0]);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         Method[] methods = cls.getMethods();
         System.out.println(Arrays.toString(methods));
         for(Method k : methods){
             if(k.getName().equals(cls_method[1])){
-                return (Html) k.invoke(null,params);
+                try {
+                    return (Html) k.invoke(null,params);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
             }
         }
         throw new UnsupportedOperationException();

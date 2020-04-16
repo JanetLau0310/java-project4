@@ -18,7 +18,9 @@ public class Model {
     }
 
     public static void check_int(int x){
-        if(x<0) throw new NullPointerException();
+        if(x<0){
+            return;
+        }
     }
     public void save() {
         //this is an instance of current model

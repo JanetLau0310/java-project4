@@ -13,7 +13,7 @@ public class Model {
         return unique_id;
     }
     public void setID(int id){
-        this.unique_id=id;
+        this.unique_id = id;
     }
     public void save() {
         //this is an instance of current model

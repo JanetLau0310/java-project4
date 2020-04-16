@@ -95,7 +95,8 @@ public class Html {
     }
 
     public Html submit(String value) {
-        String button = " <input type=\"submit\" " + "value=\"" + value + "\""+"/>";
+        // <input type="submit"
+        String button = "<input type=\"submit\" " + "value=\"" + value + "\""+"/>";
         return seq(new Html(button));
     }
 

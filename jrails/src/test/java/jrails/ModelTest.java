@@ -34,6 +34,7 @@ public class ModelTest {
         b2.num_copies = 999; // hm, same as other book
         b2.save(); // a second record is added to the database
         assert(b.id() != b2.id()); // every row has a globally unique id (int) column, so we can tell them apart
+       // assert(Model.all().size()==2);
         Book b3 = Model.find(Book.class, 3); // finds the book with id 3 in the db, if any
         //List<Book> bs = Model.all(Book.class); // returns all books in the db
         b.destroy(); // remove book b from db

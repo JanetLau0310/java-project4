@@ -7,11 +7,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/src/main/java/books/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/books/src/main/java/books/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/classes/java/main/jrails/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/classes/java/test/jrails/ModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/classes/java/test/jrails/ModelTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.HtmlTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.JRouterTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ModelTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ModelTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/classes/jrails.ViewTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/reports/tests/test/packages/jrails.html" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/reports/tests/test/packages/jrails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.HtmlTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.JRouterTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ModelTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/TEST-jrails.ViewTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jrails/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" afterDir="false" />
     </list>
@@ -106,7 +123,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'p4.jrails.test'">
+  <component name="RunManager" selected="Application.Main2">
     <configuration name="Main2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="books.Main" />
       <module name="p4.books.main" />
@@ -224,9 +241,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ModelTest" />
         <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
         <item itemvalue="Gradle.ModelTest.myTest_b" />
-        <item itemvalue="Gradle.ModelTest" />
         <item itemvalue="Gradle.ViewTest" />
         <item itemvalue="Gradle.ViewTest.showBook" />
       </list>
@@ -278,38 +295,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586986237187" />
-    <state width="1492" height="140" key="GridCell.Tab.0.bottom" timestamp="1586995707612">
+    <state width="1492" height="212" key="GridCell.Tab.0.bottom" timestamp="1587000304847">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="140" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586995707612" />
-    <state width="1492" height="140" key="GridCell.Tab.0.center" timestamp="1586995707612">
+    <state width="1492" height="212" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587000304847" />
+    <state width="1492" height="212" key="GridCell.Tab.0.center" timestamp="1587000304847">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="140" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586995707612" />
-    <state width="1492" height="140" key="GridCell.Tab.0.left" timestamp="1586995707612">
+    <state width="1492" height="212" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587000304847" />
+    <state width="1492" height="212" key="GridCell.Tab.0.left" timestamp="1587000304847">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="140" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586995707612" />
-    <state width="1492" height="140" key="GridCell.Tab.0.right" timestamp="1586995707612">
+    <state width="1492" height="212" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587000304847" />
+    <state width="1492" height="212" key="GridCell.Tab.0.right" timestamp="1587000304847">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="140" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586995707612" />
-    <state width="1492" height="362" key="GridCell.Tab.1.bottom" timestamp="1586995695615">
+    <state width="1492" height="212" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587000304847" />
+    <state width="1492" height="222" key="GridCell.Tab.1.bottom" timestamp="1586998318092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="362" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586995695615" />
-    <state width="1492" height="362" key="GridCell.Tab.1.center" timestamp="1586995695615">
+    <state width="1492" height="222" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586998318092" />
+    <state width="1492" height="222" key="GridCell.Tab.1.center" timestamp="1586998318092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="362" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586995695615" />
-    <state width="1492" height="362" key="GridCell.Tab.1.left" timestamp="1586995695615">
+    <state width="1492" height="222" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586998318092" />
+    <state width="1492" height="222" key="GridCell.Tab.1.left" timestamp="1586998318092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="362" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586995695615" />
-    <state width="1492" height="362" key="GridCell.Tab.1.right" timestamp="1586995695615">
+    <state width="1492" height="222" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586998318092" />
+    <state width="1492" height="222" key="GridCell.Tab.1.right" timestamp="1586998318092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="362" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586995695615" />
+    <state width="1492" height="222" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586998318092" />
     <state x="373" y="2" width="1038" height="707" key="SettingsEditor" timestamp="1586912011139">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -348,56 +365,6 @@
           <url>file://$PROJECT_DIR$/books/src/main/java/books/BookController.java</url>
           <line>31</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/books/src/main/java/books/BookController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/books/src/main/java/books/BookController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/JServer.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/JServer.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>239</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>222</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>194</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

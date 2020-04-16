@@ -8,7 +8,13 @@ import java.util.*;
 
 public class Model {
     private int unique_id;
-
+    public int id() {
+        // to get an id
+        return unique_id;
+    }
+    public void setID(int id){
+        this.unique_id=id;
+    }
     public void save() {
         //this is an instance of current model
         Model model = this;
@@ -23,7 +29,7 @@ public class Model {
             writer = new OutputStreamWriter(new FileOutputStream(tmp,true));
             List<Object> list = new ArrayList<Object>();
             // id = 0 before save in file
-            //this.unique_id = 0;
+            list.add(0);
             for(Field field : model.getClass().getFields()){
                 Column column = field.getAnnotation(Column.class);
                 if(column != null) {
@@ -46,7 +52,7 @@ public class Model {
             }
             if(f.length()==0){
                 this.unique_id = 1;
-                list.add(unique_id);
+                list.set(0, this.unique_id);
                 for(Object data : list){
                     String rowStr = data + ",";
                     writer.write(rowStr);
@@ -64,10 +70,10 @@ public class Model {
 
                 while (((line = layout.readLine())) != null){
                     String[] cells = line.split(",");
-                    if(id.equals(cells[cells.length-1])){
+                    if(id.equals(cells[0])){
                         // System.out.println("in db");
                         mark = 1;
-                        list.add(this.unique_id);
+                        list.set(0, this.unique_id);
                         for(Object data : list){
                             update.append(data);
                             update.append(",");
@@ -82,7 +88,7 @@ public class Model {
                         throw new UnsupportedOperationException("not in db");
                     }
                     this.unique_id = size;
-                    list.add(this.unique_id);
+                    list.set(0, this.unique_id);
                     for(Object data : list){
                         String rowStr = data + ",";
                         writer.write(rowStr);
@@ -114,11 +120,6 @@ public class Model {
             tmp.renameTo(dump);
         }
     }
-
-    public int id() {
-        // to get an id
-        return this.unique_id;
-    }
     //check the db for given id, if not,return null;
     public static <T extends Model> T find(Class<T> c, int id) {
         File f = new File("db.csv");
@@ -134,27 +135,28 @@ public class Model {
         BufferedReader layout = null;
         try{
             Field[] fields = c.getDeclaredFields();
-            Object obj = c.getDeclaredConstructor().newInstance();
-            t = (T) obj;
             reader = new InputStreamReader(new FileInputStream(f));
             layout = new BufferedReader(reader);
             String line = null;
             int mark = 0;
-            if(id==0){ id=1; }
             while (((line = layout.readLine())) != null){
                 String[] cells = line.split(",");
-                if(cells[cells.length-1].equals(String.valueOf(id))) {
+                if(cells[0].equals(String.valueOf(id))) {
+                    Object obj = c.getDeclaredConstructor().newInstance();
+                    t = (T) obj;
+                    t.setID(id);
                     mark = 1;
                     for(int k=0 ; k<fields.length; k++){
                         if(fields[k].getType().equals(int.class)){
-                            fields[k].set(t,Integer.parseInt(cells[k]));
+                            fields[k].set(t,Integer.parseInt(cells[k+1]));
                         }else{
-                            fields[k].set(t,cells[k]);
+                            fields[k].set(t,cells[k+1]);
                         }
                     }
                 }
             }
             if( mark == 0 ){ return null; }
+
             layout.close();
             reader.close();
         }catch (Exception e) {
@@ -190,11 +192,12 @@ public class Model {
                 String[] cells = line.split(",");
                 Object obj = cons.newInstance();
                 T t = (T) obj;
+                t.setID(Integer.parseInt(cells[0]));
                 for(int k=0 ; k<fields.length; k++){
                     if(fields[k].getType().equals(int.class)){
-                        fields[k].set(t,Integer.parseInt(cells[k]));
+                        fields[k].set(t,Integer.parseInt(cells[k+1]));
                     }else{
-                        fields[k].set(t,cells[k]);
+                        fields[k].set(t,cells[k+1]);
                     }
                 }
                 list.add(t);
@@ -237,7 +240,7 @@ public class Model {
                         String line = null;
                         while (((line = layout.readLine())) != null){
                             String[] cells = line.split(",");
-                            if(!(cells[cells.length-1].equals(String.valueOf(this.unique_id)))) {
+                            if(!(cells[0].equals(String.valueOf(this.unique_id)))) {
                                 fw.write(line+"\r\n");
                             }
                         }

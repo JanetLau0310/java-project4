@@ -17,31 +17,26 @@ public class ModelTest {
         model = new Model(){};
     }
     @Test
-    public void myTest_b() throws Exception{
-        Book b1 = new Book();
+    public void myTest_b(){
+        Book b = new Book();
+       // System.out.println(b.id());
+        b.title = "Programming Languages: Build, Prove, and Compare";
+        b.author = "Norman Ramsey";
+        b.num_copies = 999;
+        // The book b exists in memory but isn't saved to the db
+        b.save(); // now the book is in the db
+        b.num_copies = 42; // the book in the db still has 999 copies
+        b.save(); // now the book in the db has 42 copies
+
         Book b2 = new Book();
-        Book b3 = new Book();
-
-        b1.title = "Beyond Good and Evil";
-        b1.author = "Nietzsche";
-        b1.num_copies = 100;
-        b1.save();
-
-        b2.title = "";
-        b2.author = "";
-        b2.num_copies = 0;
-        b2.save();
-        b2.destroy();
-
-        b3.title = "12 Rules,for Life";
-        b3.author = "Jordan B. Peterson";
-        b3.num_copies = 10;
-        b3.save();
-
-        b1.num_copies = 101;
-        b1.save();
-        //assert(Model.find(Book.class,0) == null);
-        assert(Model.all(Book.class).size() == 2);
+        b2.title = "Programming Languages: Build, Prove, and Compare";
+        b2.author = "Norman Ramsey";
+        b2.num_copies = 999; // hm, same as other book
+        b2.save(); // a second record is added to the database
+        assert(b.id() != b2.id()); // every row has a globally unique id (int) column, so we can tell them apart
+        Book b3 = Model.find(Book.class, 3); // finds the book with id 3 in the db, if any
+        //List<Book> bs = Model.all(Book.class); // returns all books in the db
+        b.destroy(); // remove book b from db
     }
 
     @Test

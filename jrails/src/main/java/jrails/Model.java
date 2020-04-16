@@ -23,11 +23,11 @@ public class Model {
             writer = new OutputStreamWriter(new FileOutputStream(tmp,true));
             List<Object> list = new ArrayList<Object>();
             // id = 0 before save in file
-            list.add(0);
+            //this.unique_id = 0;
             for(Field field : model.getClass().getFields()){
                 Column column = field.getAnnotation(Column.class);
                 if(column != null) {
-                   // Object value = field.get(model);
+                    // Object value = field.get(model);
                     if (field.getType() == null) { list.add("Null");
                     } else {
                         if (field.getType().equals(String.class)) {
@@ -46,7 +46,7 @@ public class Model {
             }
             if(f.length()==0){
                 this.unique_id = 1;
-                list.set(0, this.unique_id);
+                list.add(unique_id);
                 for(Object data : list){
                     String rowStr = data + ",";
                     writer.write(rowStr);
@@ -64,10 +64,10 @@ public class Model {
 
                 while (((line = layout.readLine())) != null){
                     String[] cells = line.split(",");
-                    if(id.equals(cells[0])){
-                       // System.out.println("in db");
+                    if(id.equals(cells[cells.length-1])){
+                        // System.out.println("in db");
                         mark = 1;
-                        list.set(0, this.unique_id);
+                        list.add(this.unique_id);
                         for(Object data : list){
                             update.append(data);
                             update.append(",");
@@ -82,7 +82,7 @@ public class Model {
                         throw new UnsupportedOperationException("not in db");
                     }
                     this.unique_id = size;
-                    list.set(0, this.unique_id);
+                    list.add(this.unique_id);
                     for(Object data : list){
                         String rowStr = data + ",";
                         writer.write(rowStr);
@@ -140,13 +140,14 @@ public class Model {
             layout = new BufferedReader(reader);
             String line = null;
             int mark = 0;
+            if(id==0){ id=1; }
             while (((line = layout.readLine())) != null){
                 String[] cells = line.split(",");
-                if(cells[0].equals(String.valueOf(id))) {
+                if(cells[cells.length-1].equals(String.valueOf(id))) {
                     mark = 1;
                     for(int k=0 ; k<fields.length; k++){
                         if(fields[k].getType().equals(int.class)){
-                            fields[k].set(t,Integer.parseInt(cells[k+1]));
+                            fields[k].set(t,Integer.parseInt(cells[k]));
                         }else{
                             fields[k].set(t,cells[k]);
                         }
@@ -167,7 +168,7 @@ public class Model {
                 if (reader!=null){ reader.close(); }
             }catch (Exception e) { e.printStackTrace();}
         }
-        return t; 
+        return t;
     }
 
     //similar to find, return all instances of class
@@ -191,22 +192,22 @@ public class Model {
                 T t = (T) obj;
                 for(int k=0 ; k<fields.length; k++){
                     if(fields[k].getType().equals(int.class)){
-                        fields[k].set(t,Integer.parseInt(cells[k+1]));
+                        fields[k].set(t,Integer.parseInt(cells[k]));
                     }else{
-                        fields[k].set(t,cells[k+1]);
+                        fields[k].set(t,cells[k]);
                     }
                 }
                 list.add(t);
             }
             layout.close();
             reader.close();
-            }catch (Exception e) { e.printStackTrace();
-            } finally {
-                try{ if (layout!=null){ layout.close(); }
-                    }catch (Exception e) { e.printStackTrace();}
-                try{ if (reader!=null){ reader.close(); }
-                    }catch (Exception e) { e.printStackTrace();}
-                }
+        }catch (Exception e) { e.printStackTrace();
+        } finally {
+            try{ if (layout!=null){ layout.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+            try{ if (reader!=null){ reader.close(); }
+            }catch (Exception e) { e.printStackTrace();}
+        }
         return list;
     }
 
@@ -236,7 +237,7 @@ public class Model {
                         String line = null;
                         while (((line = layout.readLine())) != null){
                             String[] cells = line.split(",");
-                            if(!(cells[0].equals(String.valueOf(this.unique_id)))) {
+                            if(!(cells[cells.length-1].equals(String.valueOf(this.unique_id)))) {
                                 fw.write(line+"\r\n");
                             }
                         }

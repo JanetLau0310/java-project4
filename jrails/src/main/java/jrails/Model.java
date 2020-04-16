@@ -33,7 +33,6 @@ public class Model {
             for(Field field : model.getClass().getFields()){
                 Column column = field.getAnnotation(Column.class);
                 if(column != null) {
-                    // Object value = field.get(model);
                     if (field.getType() == null) { list.add("Null");
                     } else {
                         if (field.getType().equals(String.class)) {
@@ -48,6 +47,9 @@ public class Model {
                             list.add(field.get(model));
                         } else { throw new UnsupportedClassVersionError(); }
                     }
+                }else{
+                    Object value = field.get(model);
+                    list.add(value);
                 }
             }
             if(f.length()==0){
@@ -156,7 +158,6 @@ public class Model {
                 }
             }
             if( mark == 0 ){ return null; }
-
             layout.close();
             reader.close();
         }catch (Exception e) {
@@ -219,7 +220,9 @@ public class Model {
     public void destroy() {
         try {
             //if not save to db before
-            if (this.unique_id == 0) throw new Exception();
+            if (this.unique_id == 0) {
+                throw new Exception();
+            }
             else {
                 Model model = find(this.getClass(), this.unique_id);
                 if(model != null){

@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/build/libs/jrails-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Html.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Html.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/main/java/jrails/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java" afterDir="false" />
     </list>
@@ -109,13 +108,53 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main2">
+  <component name="RunManager" selected="Gradle.Tests in 'p4.jrails.test'">
     <configuration name="Main2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="books.Main" />
       <module name="p4.books.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ModelTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;jrails.ModelTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ModelTest.myTest_b" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;jrails.ModelTest.myTest_b&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":jrails:cleanTest" />
+            <option value=":jrails:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="Tests in 'p4.jrails.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -177,61 +216,21 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ViewTest.p" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;jrails.ViewTest.p&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jrails:cleanTest" />
-            <option value=":jrails:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ViewTest.showBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;jrails.ViewTest.showBook&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":jrails:cleanTest" />
-            <option value=":jrails:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.Main2" />
       <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
-      <item itemvalue="Gradle.ViewTest.showBook" />
-      <item itemvalue="Gradle.ViewTest.p" />
       <item itemvalue="Gradle.ViewTest.empty" />
       <item itemvalue="Gradle.ViewTest" />
+      <item itemvalue="Gradle.ModelTest.myTest_b" />
+      <item itemvalue="Gradle.ModelTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'p4.jrails.test'" />
+        <item itemvalue="Gradle.ModelTest" />
+        <item itemvalue="Gradle.ModelTest.myTest_b" />
         <item itemvalue="Gradle.ViewTest" />
         <item itemvalue="Gradle.ViewTest.empty" />
-        <item itemvalue="Gradle.ViewTest.p" />
-        <item itemvalue="Gradle.ViewTest.showBook" />
       </list>
     </recent_temporary>
   </component>
@@ -281,22 +280,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587005219304" />
-    <state width="1492" height="83" key="GridCell.Tab.0.bottom" timestamp="1587007309244">
+    <state width="1492" height="2" key="GridCell.Tab.0.bottom" timestamp="1587008544672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="83" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587007309244" />
-    <state width="1492" height="83" key="GridCell.Tab.0.center" timestamp="1587007309244">
+    <state width="1492" height="2" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587008544672" />
+    <state width="1492" height="2" key="GridCell.Tab.0.center" timestamp="1587008544672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="83" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587007309244" />
-    <state width="1492" height="83" key="GridCell.Tab.0.left" timestamp="1587007309244">
+    <state width="1492" height="2" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587008544672" />
+    <state width="1492" height="2" key="GridCell.Tab.0.left" timestamp="1587008544672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="83" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587007309244" />
-    <state width="1492" height="83" key="GridCell.Tab.0.right" timestamp="1587007309244">
+    <state width="1492" height="2" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587008544672" />
+    <state width="1492" height="2" key="GridCell.Tab.0.right" timestamp="1587008544672">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="83" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587007309244" />
+    <state width="1492" height="2" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587008544672" />
     <state width="1492" height="277" key="GridCell.Tab.1.bottom" timestamp="1587004979872">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

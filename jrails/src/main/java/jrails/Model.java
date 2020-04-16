@@ -17,7 +17,7 @@ public class Model {
         this.unique_id = id;
     }
 
-    public void check_int(int x){
+    public static void check_int(int x){
         if(x<0) throw new NullPointerException();
     }
     public void save() {
@@ -158,14 +158,15 @@ public class Model {
                     mark = 1;
                     for(int k=0 ; k<fields.length; k++){
                         if(fields[k].getType().equals(int.class)){
+                            check_int(Integer.parseInt(cells[k+1]));
                             fields[k].set(t,Integer.parseInt(cells[k+1]));
                         }else if (fields[k].getType().equals(String.class)){
                             String tmp = cells[k+1].replaceAll("#", ",");
                             tmp = tmp.replaceAll("Empty","");
                             tmp = tmp.replaceAll("Null",null);
                             fields[k].set(t,tmp);
-                        }else{
-                            fields[k].set(t,cells[k+1]);
+                        }else if (fields[k].getType().equals(boolean.class)){
+                            fields[k].set(t,Boolean.parseBoolean(cells[k+1]));
                         }
                     }
                 }
@@ -209,14 +210,15 @@ public class Model {
                 t.setID(Integer.parseInt(cells[0]));
                 for(int k=0 ; k<fields.length; k++){
                     if(fields[k].getType().equals(int.class)){
+                        check_int(Integer.parseInt(cells[k+1]));
                         fields[k].set(t,Integer.parseInt(cells[k+1]));
                     }else if (fields[k].getType().equals(String.class)){
                         String tmp = cells[k+1].replaceAll("#", ",");
                         tmp = tmp.replaceAll("Empty","");
                         tmp = tmp.replaceAll("Null",null);
                         fields[k].set(t,tmp);
-                    }else{
-                        fields[k].set(t,cells[k+1]);
+                    }else if (fields[k].getType().equals(boolean.class)){
+                        fields[k].set(t,Boolean.parseBoolean(cells[k+1]));
                     }
                 }
                 list.add(t);

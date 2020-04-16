@@ -1,5 +1,6 @@
 package jrails;
 
+import javax.print.attribute.standard.NumberUpSupported;
 import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -14,6 +15,10 @@ public class Model {
     }
     public void setID(int id){
         this.unique_id = id;
+    }
+
+    public void check_int(int x){
+        if(x<0) throw new NullPointerException();
     }
     public void save() {
         //this is an instance of current model
@@ -43,8 +48,10 @@ public class Model {
                                 value = ((String) value).replaceAll(",", "#");
                                 list.add(value);
                             }
-                        } else if (field.getType().equals(int.class)
-                                || field.getType().equals(boolean.class)) {
+                        } else if (field.getType().equals(int.class)){
+                            check_int(Integer.parseInt(field.get(model).toString()));
+                            list.add(field.get(model));
+                        }else if(field.getType().equals(boolean.class)) {
                             list.add(field.get(model));
                         } else { throw new UnsupportedClassVersionError(); }
                     }

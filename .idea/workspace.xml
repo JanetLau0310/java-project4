@@ -97,7 +97,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main2">
+  <component name="RunManager" selected="Gradle.ModelTest.myTest_b">
     <configuration name="Main2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="books.Main" />
       <module name="p4.books.main" />
@@ -269,22 +269,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="812" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587005219304" />
-    <state width="1492" height="277" key="GridCell.Tab.0.bottom" timestamp="1587010482203">
+    <state width="1492" height="221" key="GridCell.Tab.0.bottom" timestamp="1587011841135">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587010482203" />
-    <state width="1492" height="277" key="GridCell.Tab.0.center" timestamp="1587010482203">
+    <state width="1492" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587011841135" />
+    <state width="1492" height="221" key="GridCell.Tab.0.center" timestamp="1587011841119">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="277" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587010482203" />
-    <state width="1492" height="277" key="GridCell.Tab.0.left" timestamp="1587010482203">
+    <state width="1492" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587011841119" />
+    <state width="1492" height="221" key="GridCell.Tab.0.left" timestamp="1587011841119">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="277" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587010482203" />
-    <state width="1492" height="277" key="GridCell.Tab.0.right" timestamp="1587010482203">
+    <state width="1492" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587011841119" />
+    <state width="1492" height="221" key="GridCell.Tab.0.right" timestamp="1587011841119">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="277" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587010482203" />
+    <state width="1492" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587011841119" />
     <state width="1492" height="277" key="GridCell.Tab.1.bottom" timestamp="1587010482203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -334,11 +334,6 @@
           <url>file://$PROJECT_DIR$/books/src/main/java/books/BookView.java</url>
           <line>30</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jrails/src/test/java/jrails/ModelTest.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

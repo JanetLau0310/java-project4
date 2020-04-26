@@ -31,6 +31,8 @@ public class ModelTest {
         b2.title = "";
         b2.author = "";
         b2.num_copies = 10;
+        //assertThat(Model.find(Book.class,2).num_copies,is(10));
+        b2.destroy();
         b2.save();
 
         b3.title = "12 Rules,for Life";
@@ -39,9 +41,6 @@ public class ModelTest {
         b3.save();
 
         assert(b1.id()!=b2.id());
-       // b2.destroy();
-       // assertThat(Model.find(Book.class,3).num_copies,is(-1));
-        //b2.destroy();
         assert(Model.all(Book.class).size() == 3);
     }
 

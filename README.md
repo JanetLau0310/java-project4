@@ -24,8 +24,8 @@ Once imported you should see an elephant symbol and the word gradle on the right
 of the Intellij window. Clicking it will allow you to run gradle builds and tests through the IDE.
 
 ## Details Description
-Implemented a web server that uses a model-view-controller architecture in Java, achieving the basic functions ofMVC web app frameworks similar as Ruby on Rails.
+Implemented a web server that uses a model-view-controller architecture in Java, achieving the basic functions of MVC web app frameworks similar as Ruby on Rails.
 
 Built a web framework, including a class JServer with a method that starts up an HTTP server on specific port,listens for user requests, and routes any request received then sends the result back to the web browser.  Designedthe controller methods in order to handle requests and returns a HTML page in response.
 
-Implemented the primitive database functions by reflection, including storing, finding, listing all and destroyingdata in database.Wrote the test code to make sure the functions of the framework were compl
+Implemented the primitive database functions by reflection, including storing, finding, listing all and destroyingdata in database.Wrote the test code to make sure the functions of the framework were completed.
